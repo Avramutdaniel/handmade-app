@@ -1,0 +1,481 @@
+/* Home.css - Enhanced styling for the handmade e-commerce store */
+
+/* General styles and variables */
+:root {
+  --primary-color: #776b5d;
+  --secondary-color: #e2d8c8;
+  --accent-color: #9c7c58;
+  --text-dark: #333333;
+  --text-light: #f8f5f0;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+  --border-radius: 8px;
+}
+
+/* Base container */
+.home-container {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  color: var(--text-dark);
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+  position: relative;
+  display: inline-block;
+}
+
+.section-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: var(--accent-color);
+}
+
+.section-header p {
+  font-size: 1.1rem;
+  color: #777;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Hero Banner */
+.hero-banner {
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+  color: var(--text-light);
+  overflow: hidden;
+}
+
+.hero-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('https://placehold.co/1200x600/776b5d/e2d8c8?text=Handcrafted+With+Love') center/cover no-repeat;
+  opacity: 0.2;
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 800px;
+  padding: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.shop-now-btn {
+  display: inline-block;
+  padding: 0.875rem 2rem;
+  background-color: var(--text-light);
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.shop-now-btn:hover {
+  background-color: transparent;
+  color: var(--text-light);
+  border-color: var(--text-light);
+  transform: translateY(-3px);
+}
+
+/* Featured Categories */
+.featured-products {
+  padding: 5rem 0;
+  background-color: #f9f7f4;
+}
+
+.featured-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.category-card {
+  background-color: white;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  text-align: center;
+  padding-bottom: 1.5rem;
+}
+
+.category-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.category-image {
+  height: 250px;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 1rem;
+}
+
+.category-image.home-decor {
+  background-image: url('https://placehold.co/400x250/e2d8c8/776b5d?text=Home+Decor');
+}
+
+.category-image.jewelry {
+  background-image: url('https://placehold.co/400x250/e2d8c8/776b5d?text=Jewelry');
+}
+
+.category-image.kitchen {
+  background-image: url('https://placehold.co/400x250/e2d8c8/776b5d?text=Kitchen');
+}
+
+.category-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.category-link {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 20px;
+  transition: var(--transition);
+}
+
+.category-link:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Products Section */
+.products-section {
+  padding: 5rem 0;
+}
+
+.category-filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.category-btn {
+  padding: 0.6rem 1.2rem;
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: 20px;
+  color: var(--primary-color);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.category-btn:hover, .category-btn.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* Loading and Error Messages */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  text-align: center;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(119, 107, 93, 0.3);
+  border-radius: 50%;
+  border-top-color: var(--primary-color);
+  animation: spin 1s ease-in-out infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.error-message {
+  padding: 1.5rem;
+  background-color: #fff1f0;
+  border-left: 4px solid #ff4d4f;
+  color: #cf1322;
+  margin: 2rem 0;
+  border-radius: 4px;
+}
+
+.no-products-message {
+  padding: 3rem;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #777;
+}
+
+/* Artisan Story Section */
+.artisan-story {
+  padding: 5rem 0;
+  background-color: var(--secondary-color);
+}
+
+.artisan-story .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.story-content {
+  padding-right: 2rem;
+}
+
+.story-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+}
+
+.story-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  color: #5d5346;
+}
+
+.story-link {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+}
+
+.story-link:hover {
+  background-color: #655d51;
+  transform: translateY(-3px);
+}
+
+.story-image {
+  height: 400px;
+  background: url('https://placehold.co/600x400/776b5d/e2d8c8?text=Artisan+Story') center/cover no-repeat;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+/* Features Section */
+.features-section {
+  padding: 5rem 0;
+  background-color: #f9f7f4;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.feature-card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.feature-card p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.7;
+}
+
+/* Newsletter Section */
+.newsletter-section {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+  color: white;
+  text-align: center;
+}
+
+.newsletter-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.newsletter-section p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.newsletter-form {
+  display: flex;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 0.875rem 1.5rem;
+  border: none;
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
+  font-size: 1rem;
+}
+
+.newsletter-form button {
+  padding: 0 1.5rem;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border: none;
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.newsletter-form button:hover {
+  background-color: #d5c9b5;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
+  
+  .artisan-story .container {
+    grid-template-columns: 1fr;
+  }
+  
+  .story-content {
+    padding-right: 0;
+    text-align: center;
+    order: 2;
+  }
+  
+  .story-image {
+    order: 1;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-banner {
+    height: 500px;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .features {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .newsletter-form {
+    flex-direction: column;
+  }
+  
+  .newsletter-form input {
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+  }
+  
+  .newsletter-form button {
+    border-radius: var(--border-radius);
+    padding: 0.875rem 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .features {
+    grid-template-columns: 1fr;
+  }
+}
