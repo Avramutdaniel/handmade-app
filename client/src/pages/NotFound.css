@@ -1,0 +1,128 @@
+/* NotFound.css - 404 page styles */
+
+.not-found-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .not-found-content {
+    max-width: 600px;
+  }
+  
+  .not-found-title {
+    font-size: 8rem;
+    font-weight: 700;
+    color: #3498db;
+    margin: 0;
+    line-height: 1;
+    text-shadow: 5px 5px 0 rgba(52, 152, 219, 0.1);
+  }
+  
+  .not-found-subtitle {
+    font-size: 2rem;
+    margin: 0 0 20px;
+    color: #2c3e50;
+  }
+  
+  .not-found-message {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #7f8c8d;
+    line-height: 1.6;
+  }
+  
+  .not-found-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  
+  .back-home-button,
+  .contact-button {
+    padding: 12px 25px;
+    border-radius: 4px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  
+  .back-home-button {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  .back-home-button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+  }
+  
+  .contact-button {
+    background-color: transparent;
+    color: #3498db;
+    border: 2px solid #3498db;
+  }
+  
+  .contact-button:hover {
+    background-color: rgba(52, 152, 219, 0.1);
+    transform: translateY(-2px);
+  }
+  
+  .not-found-suggestions {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+  }
+  
+  .not-found-suggestions h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: #2c3e50;
+  }
+  
+  .not-found-suggestions ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .not-found-suggestions li {
+    margin-bottom: 10px;
+  }
+  
+  .not-found-suggestions a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .not-found-suggestions a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 576px) {
+    .not-found-title {
+      font-size: 6rem;
+    }
+    
+    .not-found-subtitle {
+      font-size: 1.5rem;
+    }
+    
+    .not-found-actions {
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .back-home-button,
+    .contact-button {
+      width: 100%;
+    }
+  }
