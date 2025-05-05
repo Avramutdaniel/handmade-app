@@ -1,0 +1,493 @@
+/* UserDashboard.css - Styles for the user dashboard page */
+
+.dashboard-container {
+    display: flex;
+    min-height: 80vh;
+    background-color: #f5f7fa;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Dashboard Sidebar */
+  .dashboard-sidebar {
+    width: 250px;
+    background-color: #2c3e50;
+    color: white;
+    padding: 30px 0;
+    flex-shrink: 0;
+  }
+  
+  .user-profile {
+    padding: 0 20px 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+  }
+  
+  .user-avatar {
+    width: 50px;
+    height: 50px;
+    background-color: #3498db;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-right: 15px;
+  }
+  
+  .user-info h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: white;
+  }
+  
+  .user-info p {
+    margin: 5px 0 0;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  /* Dashboard Navigation */
+  .dashboard-nav {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .nav-item {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: left;
+    padding: 12px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+  }
+  
+  .nav-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+  }
+  
+  .nav-item.active {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  .nav-item.active::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background-color: #2ecc71;
+  }
+  
+  .nav-item.logout {
+    margin-top: auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e74c3c;
+  }
+  
+  /* Dashboard Content */
+  .dashboard-content {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+  }
+  
+  .dashboard-content h1 {
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: #2c3e50;
+  }
+  
+  /* Orders Section */
+  .orders-section {
+    width: 100%;
+  }
+  
+  .no-orders {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .no-orders p {
+    margin-bottom: 20px;
+    color: #7f8c8d;
+    font-size: 1.1rem;
+  }
+  
+  .shop-now-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+  }
+  
+  .shop-now-btn:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Order Cards */
+  .orders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .order-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+  }
+  
+  .order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .order-info h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #2c3e50;
+  }
+  
+  .order-info p {
+    margin: 5px 0 0;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+  }
+  
+  .order-status {
+    font-size: 0.9rem;
+  }
+  
+  .status-badge {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: 600;
+  }
+  
+  .status-badge.pending {
+    background-color: #f39c12;
+    color: white;
+  }
+  
+  .status-badge.processing {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  .status-badge.shipped {
+    background-color: #2ecc71;
+    color: white;
+  }
+  
+  .status-badge.delivered {
+    background-color: #27ae60;
+    color: white;
+  }
+  
+  .status-badge.cancelled {
+    background-color: #e74c3c;
+    color: white;
+  }
+  
+  /* Order Items */
+  .order-items {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .order-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .item-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+    object-fit: cover;
+    margin-right: 15px;
+  }
+  
+  .item-details {
+    flex: 1;
+  }
+  
+  .item-name {
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 5px;
+  }
+  
+  .item-price {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+  }
+  
+  /* Order Footer */
+  .order-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #f8f9fa;
+    border-top: 1px solid #eee;
+  }
+  
+  .order-total {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #2c3e50;
+  }
+  
+  .view-details-btn {
+    padding: 8px 15px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .view-details-btn:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Profile Section */
+  .profile-section {
+    width: 100%;
+  }
+  
+  .profile-form {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+  }
+  
+  .profile-form input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .profile-form input[readonly] {
+    background-color: #f8f9fa;
+  }
+  
+  .edit-profile-btn {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+  }
+  
+  .edit-profile-btn:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Settings Section */
+  .settings-section {
+    width: 100%;
+  }
+  
+  .settings-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 25px;
+    margin-bottom: 20px;
+  }
+  
+  .settings-card h2 {
+    margin-top: 0;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+  }
+  
+  .settings-option {
+    margin-bottom: 15px;
+  }
+  
+  .settings-option label {
+    display: flex;
+    align-items: center;
+  }
+  
+  .settings-option input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  .change-password-btn {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .change-password-btn:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Connected Accounts */
+  .connected-account {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .connected-account:last-child {
+    border-bottom: none;
+  }
+  
+  .account-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .account-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    font-weight: 600;
+    color: #7f8c8d;
+  }
+  
+  .connect-btn {
+    padding: 6px 12px;
+    background-color: transparent;
+    border: 1px solid #3498db;
+    color: #3498db;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .connect-btn:hover {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  /* Danger Zone */
+  .danger-zone {
+    background-color: #fdedec;
+  }
+  
+  .delete-account-btn {
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .delete-account-btn:hover {
+    background-color: #c0392b;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 992px) {
+    .dashboard-container {
+      flex-direction: column;
+    }
+    
+    .dashboard-sidebar {
+      width: 100%;
+      padding: 20px;
+    }
+    
+    .dashboard-nav {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    
+    .nav-item {
+      padding: 10px 15px;
+      border-radius: 4px;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .nav-item.active::before {
+      display: none;
+    }
+    
+    .nav-item.logout {
+      margin-top: 0;
+      border-top: none;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .dashboard-content {
+      padding: 20px 15px;
+    }
+    
+    .order-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    
+    .order-footer {
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .view-details-btn {
+      width: 100%;
+    }
+    
+    .form-row {
+      flex-direction: column;
+    }
+  }

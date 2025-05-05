@@ -1,0 +1,448 @@
+/* AdminPanel.css - Styles for the admin panel */
+
+.admin-container {
+    display: flex;
+    min-height: 80vh;
+    background-color: #f5f7fa;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Admin sidebar */
+  .admin-sidebar {
+    width: 250px;
+    background-color: #2c3e50;
+    color: white;
+    padding: 30px 0;
+    flex-shrink: 0;
+  }
+  
+  .admin-header {
+    padding: 0 20px 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .admin-header h2 {
+    margin: 0 0 10px;
+    color: white;
+    font-size: 1.4rem;
+  }
+  
+  .admin-header p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+  }
+  
+  /* Admin navigation */
+  .admin-nav {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .nav-item {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: left;
+    padding: 12px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+  }
+  
+  .nav-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+  }
+  
+  .nav-item.active {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  .nav-item.active::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background-color: #2ecc71;
+  }
+  
+  .nav-item.logout {
+    margin-top: auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e74c3c;
+  }
+  
+  /* Admin content */
+  .admin-content {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+  }
+  
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .section-header h1 {
+    margin: 0;
+    color: #2c3e50;
+  }
+  
+  .add-new-btn {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .add-new-btn:hover {
+    background-color: #27ae60;
+  }
+  
+  /* Products container */
+  .products-container {
+    display: flex;
+    gap: 30px;
+  }
+  
+  /* Products list */
+  .products-list {
+    flex: 2;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+  }
+  
+  .product-list-header {
+    display: grid;
+    grid-template-columns: 80px 2fr 1fr 1fr 1fr 1fr;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #eee;
+    font-weight: 600;
+    color: #2c3e50;
+  }
+  
+  .product-header-item {
+    padding: 0 10px;
+  }
+  
+  .product-list-item {
+    display: grid;
+    grid-template-columns: 80px 2fr 1fr 1fr 1fr 1fr;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    align-items: center;
+  }
+  
+  .product-list-item:last-child {
+    border-bottom: none;
+  }
+  
+  .product-list-item:hover {
+    background-color: #f8f9fa;
+  }
+  
+  .product-item-image {
+    padding: 0 10px;
+  }
+  
+  .product-item-image img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  
+  .product-item-name {
+    padding: 0 10px;
+    font-weight: 500;
+    color: #2c3e50;
+  }
+  
+  .product-item-price,
+  .product-item-category,
+  .product-item-stock {
+    padding: 0 10px;
+    color: #7f8c8d;
+  }
+  
+  .out-of-stock {
+    color: #e74c3c;
+    font-weight: 500;
+  }
+  
+  .product-item-actions {
+    padding: 0 10px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .edit-btn,
+  .delete-btn {
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .edit-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+  }
+  
+  .edit-btn:hover {
+    background-color: #2980b9;
+  }
+  
+  .delete-btn {
+    background-color: transparent;
+    color: #e74c3c;
+    border: 1px solid #e74c3c;
+  }
+  
+  .delete-btn:hover {
+    background-color: #e74c3c;
+    color: white;
+  }
+  
+  .no-products {
+    padding: 30px;
+    text-align: center;
+    color: #7f8c8d;
+  }
+  
+  /* Product form */
+  .product-form-container {
+    flex: 1;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 25px;
+  }
+  
+  .product-form-container h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    color: #2c3e50;
+  }
+  
+  .product-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 0;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #2c3e50;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.95rem;
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .form-row .form-group {
+    flex: 1;
+  }
+  
+  .image-preview {
+    margin-top: 10px;
+  }
+  
+  .image-preview img {
+    max-width: 100%;
+    max-height: 200px;
+    border-radius: 4px;
+  }
+  
+  .image-upload-note {
+    margin-top: 5px;
+    font-size: 0.85rem;
+    color: #7f8c8d;
+  }
+  
+  .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 10px;
+  }
+  
+  .cancel-btn,
+  .save-btn {
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .cancel-btn {
+    background-color: transparent;
+    color: #7f8c8d;
+    border: 1px solid #ddd;
+  }
+  
+  .cancel-btn:hover {
+    background-color: #f8f9fa;
+  }
+  
+  .save-btn {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+  }
+  
+  .save-btn:hover {
+    background-color: #27ae60;
+  }
+  
+  /* Orders and Users sections */
+  .orders-section,
+  .users-section {
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 1200px) {
+    .products-container {
+      flex-direction: column;
+    }
+    
+    .product-form-container {
+      order: 1;
+      margin-bottom: 30px;
+    }
+    
+    .products-list {
+      order: 2;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .admin-container {
+      flex-direction: column;
+    }
+    
+    .admin-sidebar {
+      width: 100%;
+      padding: 20px;
+    }
+    
+    .admin-nav {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    
+    .nav-item {
+      padding: 10px 15px;
+      border-radius: 4px;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .nav-item.active::before {
+      display: none;
+    }
+    
+    .nav-item.logout {
+      margin-top: 0;
+      border-top: none;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .product-list-header,
+    .product-list-item {
+      grid-template-columns: 80px 2fr 1fr 1fr;
+    }
+    
+    .product-header-item:nth-child(4),
+    .product-item-category {
+      display: none;
+    }
+    
+    .form-row {
+      flex-direction: column;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .admin-content {
+      padding: 20px 15px;
+    }
+    
+    .section-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+    }
+    
+    .add-new-btn {
+      width: 100%;
+    }
+    
+    .product-list-header,
+    .product-list-item {
+      grid-template-columns: 80px 2fr 1fr;
+    }
+    
+    .product-header-item:nth-child(5),
+    .product-item-stock {
+      display: none;
+    }
+    
+    .form-actions {
+      flex-direction: column;
+    }
+    
+    .cancel-btn,
+    .save-btn {
+      width: 100%;
+    }
+  }
