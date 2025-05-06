@@ -350,8 +350,21 @@
 }
 
 .feature-icon {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 1.5rem;
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+  position: relative;
+}
+
+.feature-icon-svg {
+  width: 36px;
+  height: 36px;
+  color: var(--primary-color);
 }
 
 .feature-card h3 {
@@ -372,6 +385,25 @@
   background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
   color: white;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.newsletter-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('https://images.pexels.com/photos/1497240/pexels-photo-1497240.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') center/cover no-repeat;
+  opacity: 0.15;
+  z-index: 0;
+}
+
+.newsletter-section .container {
+  position: relative;
+  z-index: 1;
 }
 
 .newsletter-section h2 {

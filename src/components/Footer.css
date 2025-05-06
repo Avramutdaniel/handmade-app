@@ -1,8 +1,24 @@
-/* Footer.css - Styling for the e-commerce footer */
+/* Footer.css - Updated styling with artisan color palette */
+
+:root {
+  --primary-color: #A25B2A; /* Warm clay brown */
+  --secondary-color: #F0E5D8; /* Creamy beige */
+  --accent-color: #CBA135; /* Mustard gold */
+  --text-color: #3E3E3E; /* Soft charcoal */
+  --background-color: #FFFDF9; /* Off-white */
+  --error-color: #D97355; /* Terracotta red */
+  --light-primary: #C68B5F; /* Lighter primary */
+  --dark-primary: #7A4420; /* Darker primary */
+  --light-accent: #DDBE6C; /* Lighter accent */
+  --border-color: #E5DAC9; /* Subtle border */
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+  --transition: all 0.3s ease;
+  --border-radius: 8px;
+}
 
 .site-footer {
-  background-color: #f5f2ee;
-  color: #555;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
   font-size: 0.95rem;
 }
 
@@ -20,7 +36,7 @@
 .footer-logo {
   display: inline-block;
   text-decoration: none;
-  color: #333;
+  color: var(--text-color);
   margin-bottom: 1rem;
 }
 
@@ -31,14 +47,14 @@
 }
 
 .footer-logo span {
-  color: #9c7c58;
+  color: var(--primary-color);
   font-weight: 400;
 }
 
 .footer-description {
   margin-bottom: 1.5rem;
   line-height: 1.6;
-  color: #666;
+  color: #5d4b37;
 }
 
 .social-links {
@@ -52,22 +68,22 @@
   justify-content: center;
   width: 36px;
   height: 36px;
-  background-color: #fff;
+  background-color: white;
   border-radius: 50%;
-  color: #776b5d;
+  color: var(--primary-color);
   transition: all 0.3s ease;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .social-links a:hover {
-  background-color: #776b5d;
-  color: #fff;
+  background-color: var(--primary-color);
+  color: white;
   transform: translateY(-3px);
 }
 
 /* Column Headings */
 .footer-column h3 {
-  color: #333;
+  color: var(--text-color);
   font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 1.25rem;
@@ -81,7 +97,7 @@
   left: 0;
   width: 40px;
   height: 2px;
-  background-color: #9c7c58;
+  background-color: var(--accent-color);
 }
 
 /* Footer Links */
@@ -96,7 +112,7 @@
 }
 
 .footer-links a {
-  color: #666;
+  color: #5d4b37;
   text-decoration: none;
   transition: color 0.2s ease;
   display: inline-block;
@@ -104,13 +120,13 @@
 }
 
 .footer-links a:hover {
-  color: #9c7c58;
+  color: var(--primary-color);
 }
 
 .footer-links a::before {
   content: '>';
   margin-right: 8px;
-  color: #9c7c58;
+  color: var(--accent-color);
   font-size: 0.8rem;
   opacity: 0;
   transform: translateX(-5px);
@@ -128,20 +144,21 @@
   align-items: flex-start;
   margin-bottom: 1rem;
   line-height: 1.5;
+  color: #5d4b37;
 }
 
 .contact-info svg {
   margin-right: 10px;
   margin-top: 3px;
-  color: #9c7c58;
+  color: var(--accent-color);
   flex-shrink: 0;
 }
 
 /* Payment Methods */
 .payment-methods {
   padding: 1.5rem 0;
-  border-top: 1px solid #e7e2dc;
-  border-bottom: 1px solid #e7e2dc;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .payment-methods .container {
@@ -164,6 +181,7 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   font-size: 0.85rem;
   font-weight: 600;
+  color: var(--text-color);
 }
 
 /* Copyright */
@@ -171,7 +189,7 @@
   padding: 1.5rem 0;
   text-align: center;
   font-size: 0.85rem;
-  color: #777;
+  color: #5d4b37;
 }
 
 /* Responsive Design */

@@ -1,15 +1,32 @@
-/* ProductCard.css - Enhanced styling for product cards */
+/* ProductCard.css - Enhanced styling with artisan color palette */
+
+:root {
+  --primary-color: #A25B2A; /* Warm clay brown */
+  --secondary-color: #F0E5D8; /* Creamy beige */
+  --accent-color: #CBA135; /* Mustard gold */
+  --text-color: #3E3E3E; /* Soft charcoal */
+  --background-color: #FFFDF9; /* Off-white */
+  --error-color: #D97355; /* Terracotta red */
+  --light-primary: #C68B5F; /* Lighter primary */
+  --dark-primary: #7A4420; /* Darker primary */
+  --light-accent: #DDBE6C; /* Lighter accent */
+  --border-color: #E5DAC9; /* Subtle border */
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+  --transition: all 0.3s ease;
+  --border-radius: 8px;
+}
 
 .product-card {
   background-color: white;
-  border-radius: 10px;
+  border-radius: var(--border-radius);
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
   position: relative;
   height: 100%;
   display: flex;
   flex-direction: column;
+  border: 1px solid var(--border-color);
 }
 
 .product-card:hover {
@@ -21,7 +38,7 @@
   position: absolute;
   top: 10px;
   left: 10px;
-  background-color: #776b5d;
+  background-color: var(--primary-color);
   color: white;
   font-size: 0.75rem;
   padding: 0.25rem 0.75rem;
@@ -56,13 +73,24 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(162, 91, 42, 0.85);
   color: white;
   text-align: center;
-  padding: 0.5rem;
+  padding: 0.75rem;
   transform: translateY(100%);
   transition: transform 0.3s ease;
   font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quick-view svg {
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
 }
 
 .product-card:hover .quick-view {
@@ -80,7 +108,7 @@
 .product-name {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #333;
+  color: var(--text-color);
   text-decoration: none;
   margin-bottom: 0.5rem;
   line-height: 1.4;
@@ -89,7 +117,7 @@
 }
 
 .product-name:hover {
-  color: #9c7c58;
+  color: var(--primary-color);
 }
 
 .product-rating {
@@ -99,7 +127,7 @@
 }
 
 .star {
-  color: #ffc107;
+  color: var(--accent-color);
   font-size: 1rem;
   margin-right: 2px;
 }
@@ -116,7 +144,7 @@
 .star.half::before {
   content: '★';
   position: absolute;
-  color: #ffc107;
+  color: var(--accent-color);
   width: 50%;
   overflow: hidden;
 }
@@ -130,7 +158,7 @@
 .product-price {
   font-size: 1.25rem;
   font-weight: 700;
-  color: #9c7c58;
+  color: var(--accent-color);
   margin-bottom: 1rem;
 }
 
@@ -142,7 +170,7 @@
 
 .add-to-cart-btn {
   flex: 1;
-  background-color: #776b5d;
+  background-color: var(--primary-color);
   color: white;
   border: none;
   border-radius: 5px;
@@ -153,13 +181,13 @@
 }
 
 .add-to-cart-btn:hover {
-  background-color: #665d51;
+  background-color: var(--dark-primary);
 }
 
 .wishlist-btn {
   width: 40px;
-  background-color: #f0e9e0;
-  color: #776b5d;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
   border: none;
   border-radius: 5px;
   display: flex;
@@ -171,7 +199,7 @@
 }
 
 .wishlist-btn:hover {
-  background-color: #9c7c58;
+  background-color: var(--accent-color);
   color: white;
 }
 
